@@ -1,0 +1,55 @@
+<div class="modal fade" id="modalSignIn" tabindex="-1" role="dialog" aria-labelledby="modalSignInHeading" aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body text-center">
+
+        <!-- Close -->
+        <button class="btn-close" data-bs-dismiss="modal" type="button" aria-label="Close"></button>
+
+        <!-- Heading -->
+        <h1 class="mb-4" id="modalSignInHeading">
+          Sign In
+        </h1>
+
+        <!-- Text -->
+        <p>
+          Don’t have an account? <a href="sign-up.html">Sign up</a>
+        </p>
+
+        <!-- Form -->
+        <form class="mb-6">
+
+          <!-- Email -->
+          <div class="form-group">
+            <label class="visually-hidden" for="signInEmail">
+              Your email
+            </label>
+            <input class="form-control" id="signInEmail" type="email" placeholder="Your email">
+          </div>
+
+          <!-- Password -->
+          <div class="form-group">
+            <div class="input-group inpit-group-merge">
+              <input class="form-control" id="signInPassword" placeholder="Your password" type="password" aria-label="Your password" aria-describedby="signInPasswordCaption">
+              <a class="input-group-text text-decoration-none text-gray-500" id="signInPasswordCaption" data-toggle="password" href="#signInPassword">
+                <i class="fe fe-eye"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Button -->
+          <button class="btn w-100 btn-primary">
+            Sign in
+          </button>
+
+        </form>
+
+        <!-- Link -->
+        <a class="fs-sm" href="password-reset.html">
+          Forgot your password?
+        </a>
+
+      </div>
+    </div>
+  </div>
+</div>

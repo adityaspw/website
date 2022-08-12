@@ -1,0 +1,11 @@
+//
+// badge.scss
+//
+
+// Soft variants
+
+@each $color, $value in $theme-colors {
+  .badge.bg-#{$color}-soft {
+    @include badge-variant-soft($value, $badge-soft-bg-opacity);
+  }
+}

@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+    {{> partials/head title="Goodkit"}}
+  </head>
+  <body class="docs-body">
+
+    <!-- MODALS -->
+    {{> partials/modals}}
+
+    <!-- NAVBAR -->
+    {{> partials/navbar classList="navbar-light fixed-top bg-white border-bottom"}}
+
+    <!-- BREADCRUMB -->
+    {{> docs/breadcrumb title="Title"}}
+
+    <!-- CONTENT -->
+    <section>
+      <div class="container-fluid">
+        <div class="row align-items-start">
+          <div class="col-lg-3 col-xl-2 docs-sidenav docs-sidenav-start">
+
+            {{> docs/nav}}
+
+          </div>
+          <div class="col-lg-9 col-xl-8 offset-lg-3 offset-xl-2 py-6 py-md-9 px-lg-10">
+
+            {{> docs/header title="Title" isCustom=false description="Description" bootstrapDocs="" pluginsDocs=""}}
+
+            {{> docs/subheader title="Subtitle" id="id" isCustom=false description="Description"}}
+
+            <!-- Card -->
+            <div class="card card-sm docs-card">
+              <div class="card-body"></div>
+              <div class="card-footer">
+                <code class="html highlight"></code>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-3 col-xl-2 d-none d-xl-block docs-sidenav docs-sidenav-end">
+
+            <!-- List -->
+            <div class="my-6 my-md-9 px-lg-8 border-start">
+
+              <!-- List -->
+              <ul class="list-unstyled fs-xs mb-0">
+                <li class="mb-2">
+                  <a class="text-reset" href="#" data-scroll></a>
+                </li>
+              </ul>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JAVASCRIPT -->
+    {{> partials/scripts}}
+
+  </body>
+</html>

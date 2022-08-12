@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+  <head>
+    {{> partials/head title="Goodkit"}}
+  </head>
+  <body class="docs-body">
+
+    <!-- MODALS -->
+    {{> partials/modals}}
+
+    <!-- NAVBAR -->
+    {{> partials/navbar classList="navbar-light fixed-top bg-white border-bottom"}}
+
+    <!-- BREADCRUMB -->
+    {{> docs/breadcrumb title="Progress"}}
+
+    <!-- CONTENT -->
+    <section>
+      <div class="container-fluid">
+        <div class="row align-items-start">
+          <div class="col-lg-3 col-xl-2 docs-sidenav docs-sidenav-start">
+
+            {{> docs/nav}}
+
+          </div>
+          <div class="col-lg-9 col-xl-8 offset-lg-3 offset-xl-2 py-6 py-md-9 px-lg-10">
+
+            {{> docs/header title="Progress" isCustom=false description="" bootstrapDocs="http://getbootstrap.com/docs/5.0/components/progress/" pluginsDocs=""}}
+
+            {{> docs/subheader title="" id="id" isCustom=false description=""}}
+
+            <!-- Card -->
+            <div class="card card-sm docs-card">
+              <div class="card-body">
+
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 32%" aria-valuenow="32" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+              </div>
+            </div>
+
+            {{> docs/subheader title="Labels" id="labels" isCustom=false description="Add labels to your progress bars by placing text within the .progress-bar."}}
+
+            <!-- Card -->
+            <div class="card card-sm docs-card">
+              <div class="card-body">
+
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 45%;" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
+                </div>
+
+              </div>
+            </div>
+
+            {{> docs/subheader title="Backgrounds" id="backgrounds" isCustom=false description="Use background utility classes to change the appearance of individual progress bars."}}
+
+            <!-- Card -->
+            <div class="card card-sm docs-card">
+              <div class="card-body">
+
+                <div class="progress mb-3">
+                  <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="progress mb-3">
+                  <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="progress mb-3">
+                  <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-3 col-xl-2 d-none d-xl-block docs-sidenav docs-sidenav-end">
+
+            <!-- List -->
+            <div class="my-6 my-md-9 px-lg-8 border-start">
+
+              <!-- List -->
+              <ul class="list-unstyled fs-xs mb-0">
+                <li class="mb-2">
+                  <a class="text-reset" href="#labels" data-scroll>Labels</a>
+                </li>
+                <li class="mb-2">
+                  <a class="text-reset" href="#backgrounds" data-scroll>Backgrounds</a>
+                </li>
+              </ul>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JAVASCRIPT -->
+    {{> partials/scripts}}
+
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    {{> partials/head title="Goodkit"}}
+  </head>
+  <body class="docs-body">
+
+    <!-- MODALS -->
+    {{> partials/modals}}
+
+    <!-- NAVBAR -->
+    {{> partials/navbar classList="navbar-light fixed-top bg-white border-bottom"}}
+
+    <!-- BREADCRUMB -->
+    {{> docs/breadcrumb title="Pagination"}}
+
+    <!-- CONTENT -->
+    <section>
+      <div class="container-fluid">
+        <div class="row align-items-start">
+          <div class="col-lg-3 col-xl-2 docs-sidenav docs-sidenav-start">
+
+            {{> docs/nav}}
+
+          </div>
+          <div class="col-lg-9 col-xl-8 offset-lg-3 offset-xl-2 py-6 py-md-9 px-lg-10">
+
+            {{> docs/header title="Pagination" isCustom=false description="Indicates a series of related content exists across multiple pages." bootstrapDocs="http://getbootstrap.com/docs/5.0/components/pagination/" pluginsDocs=""}}
+
+            {{> docs/subheader title="" id="id" isCustom=false description=""}}
+
+            <!-- Card -->
+            <div class="card card-sm docs-card">
+              <div class="card-body">
+
+                <nav aria-label="Page navigation example">
+                  <ul class="pagination pagination-lg">
+                    <li class="page-item"><a class="page-link" href="#!">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#!">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#!">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#!">Next</a></li>
+                  </ul>
+                </nav>
+
+                <nav aria-label="Page navigation example">
+                  <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#!">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#!">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#!">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#!">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#!">Next</a></li>
+                  </ul>
+                </nav>
+
+                <nav aria-label="Page navigation example">
+                  <ul class="pagination pagination-sm">
+                    <li class="page-item"><a class="page-link" href="#!">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#!">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#!">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#!">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#!">Next</a></li>
+                  </ul>
+                </nav>
+
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-3 col-xl-2 d-none d-xl-block docs-sidenav docs-sidenav-end"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JAVASCRIPT -->
+    {{> partials/scripts}}
+
+  </body>
+</html>

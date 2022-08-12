@@ -1,0 +1,483 @@
+<!doctype html>
+<html>
+  <head>
+    {{> partials/head title="Goodkit"}}
+  </head>
+  <body class="docs-body">
+
+    <!-- MODALS -->
+    {{> partials/modals}}
+
+    <!-- NAVBAR -->
+    {{> partials/navbar classList="navbar-light fixed-top bg-white border-bottom"}}
+
+    <!-- BREADCRUMB -->
+    {{> docs/breadcrumb title="Forms"}}
+
+    <!-- CONTENT -->
+    <section>
+      <div class="container-fluid">
+        <div class="row align-items-start">
+          <div class="col-lg-3 col-xl-2 docs-sidenav docs-sidenav-start">
+
+            {{> docs/nav}}
+
+          </div>
+          <div class="col-lg-9 col-xl-8 offset-lg-3 offset-xl-2 py-6 py-md-9 px-lg-10">
+
+            {{> docs/header title="Forms" isCustom=false description="Goodkit supports all of Bootstrap's default form styling in addition to a handful of new input types and features." bootstrapDocs="https://getbootstrap.com/docs/5.0/forms/" pluginsDocs=""}}
+
+            {{> docs/subheader title="" id="" isCustom=false description=""}}
+
+            <!-- Card -->
+            <div class="card card-sm docs-card">
+              <div class="card-body">
+
+                <!-- Form -->
+                <form>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+
+              </div>
+            </div>
+
+            {{> docs/subheader title="Form controls" id="formControls" isCustom=false description="Give textual form controls like <input>s and <textarea>s an upgrade with custom styles, sizing, focus states, and more."}}
+
+            <!-- Card -->
+            <div class="card card-sm docs-card">
+              <div class="card-body">
+
+                <!-- Form -->
+                <form>
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                </form>
+
+              </div>
+            </div>
+
+            {{> docs/subheader title="Sizing" id="sizing" isCustom=false description="Set heights using classes like .form-control-lg and .form-control-sm."}}
+
+            <!-- Card -->
+            <div class="card card-sm docs-card">
+              <div class="card-body">
+
+                <!-- Input -->
+                <div class="form-group">
+                  <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example">
+                </div>
+
+                <!-- Input -->
+                <div class="form-group">
+                  <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+                </div>
+
+                <!-- Input -->
+                <div class="form-group mb-0">
+                  <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example">
+                </div>
+
+              </div>
+            </div>
+
+            {{> docs/subheader title="Disabled" id="disabled" isCustom=false description="Add the disabled boolean attribute on an input to give it a grayed out appearance and remove pointer events."}}
+
+            <!-- Card -->
+            <div class="card card-sm docs-card">
+              <div class="card-body">
+
+                <!-- Input -->
+                <div class="form-group">
+                  <input class="form-control" type="text" placeholder="Disabled input" aria-label="Disabled input example" disabled>
+                </div>
+
+                <!-- Input -->
+                <div class="form-group mb-0">
+                  <input class="form-control" type="text" placeholder="Disabled readonly input" aria-label="Disabled input example" disabled readonly>
+                </div>
+
+              </div>
+            </div>
+
+            {{> docs/subheader title="Readonly" id="readonly" isCustom=false description="Add the readonly boolean attribute on an input to prevent modification of the input’s value. Read-only inputs appear lighter (just like disabled inputs), but retain the standard cursor."}}
+
+            <!-- Card -->
+            <div class="card card-sm docs-card">
+              <div class="card-body">
+
+                <!-- Input -->
+                <input class="form-control" type="text" placeholder="Readonly input here..." aria-label="readonly input example" readonly>
+
+              </div>
+            </div>
+
+            {{> docs/subheader title="Select" id="select" isCustom=false description="Customize the native <select>s with custom CSS that changes the element’s initial appearance."}}
+
+            <!-- Card -->
+            <div class="card card-sm docs-card">
+              <div class="card-body">
+
+                <!-- Select -->
+                <select class="form-select form-select-lg form-group" aria-label=".form-select-lg example">
+                  <option selected>Open this select menu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+
+                <!-- Select -->
+                <select class="form-select form-group" aria-label="Default select example">
+                  <option selected>Open this select menu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+
+                <!-- Select -->
+                <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                  <option selected>Open this select menu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+
+              </div>
+            </div>
+
+            {{> docs/subheader title="Checks and radios" id="checksAndRadios" isCustom=false description="Create consistent cross-browser and cross-device checkboxes and radios with our completely rewritten checks component."}}
+
+            <!-- Card -->
+            <div class="card card-sm docs-card">
+              <div class="card-body">
+
+                <!-- Form check -->
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Default checkbox
+                  </label>
+                </div>
+
+                <!-- Form check -->
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                  <label class="form-check-label" for="flexCheckChecked">
+                    Checked checkbox
+                  </label>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Divider -->
+            <hr>
+
+            <!-- Card -->
+            <div class="card card-sm docs-card">
+              <div class="card-body">
+
+                <!-- Form check -->
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    Default radio
+                  </label>
+                </div>
+
+                <!-- Form check -->
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                  <label class="form-check-label" for="flexRadioDefault2">
+                    Default checked radio
+                  </label>
+                </div>
+
+              </div>
+            </div>
+
+            {{> docs/subheader title="Input group" id="inputGroup" isCustom=false description="Easily extend form controls by adding text, buttons, or button groups on either side of textual inputs, custom selects, and custom file inputs."}}
+
+            <!-- Card -->
+            <div class="card card-sm docs-card">
+              <div class="card-body">
+
+                <div class="input-group form-group">
+                  <span class="input-group-text" id="basic-addon1">@</span>
+                  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group form-group">
+                  <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                  <span class="input-group-text" id="basic-addon2">@example.com</span>
+                </div>
+
+                <label for="basic-url" class="form-label">Your vanity URL</label>
+                <div class="input-group form-group">
+                  <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+                  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                </div>
+
+                <div class="input-group form-group">
+                  <span class="input-group-text">$</span>
+                  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                  <span class="input-group-text">.00</span>
+                </div>
+
+                <div class="input-group form-group">
+                  <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+                  <span class="input-group-text">@</span>
+                  <input type="text" class="form-control" placeholder="Server" aria-label="Server">
+                </div>
+
+                <div class="input-group">
+                  <span class="input-group-text">With textarea</span>
+                  <textarea class="form-control" aria-label="With textarea"></textarea>
+                </div>
+
+              </div>
+            </div>
+
+            {{> docs/subheader title="Validation" id="validation" isCustom=false description="Provide valuable, actionable feedback to your users with HTML5 form validation, via browser default behaviors or custom styles and JavaScript."}}
+
+            <!-- Card -->
+            <div class="card card-sm docs-card">
+              <div class="card-body">
+
+                <!-- Form -->
+                <form class="row g-3">
+                  <div class="col-md-4">
+                    <label for="validationServer01" class="form-label">First name</label>
+                    <input type="text" class="form-control is-valid" id="validationServer01" value="Mark" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="validationServer02" class="form-label">Last name</label>
+                    <input type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="validationServerUsername" class="form-label">Username</label>
+                    <div class="input-group has-validation">
+                      <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                      <input type="text" class="form-control is-invalid" id="validationServerUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
+                      <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                        Please choose a username.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="validationServer03" class="form-label">City</label>
+                    <input type="text" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+                    <div id="validationServer03Feedback" class="invalid-feedback">
+                      Please provide a valid city.
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <label for="validationServer04" class="form-label">State</label>
+                    <select class="form-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+                      <option selected disabled value="">Choose...</option>
+                      <option>...</option>
+                    </select>
+                    <div id="validationServer04Feedback" class="invalid-feedback">
+                      Please select a valid state.
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <label for="validationServer05" class="form-label">Zip</label>
+                    <input type="text" class="form-control is-invalid" id="validationServer05" aria-describedby="validationServer05Feedback" required>
+                    <div id="validationServer05Feedback" class="invalid-feedback">
+                      Please provide a valid zip.
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
+                      <label class="form-check-label" for="invalidCheck3">
+                        Agree to terms and conditions
+                      </label>
+                      <div id="invalidCheck3Feedback" class="invalid-feedback">
+                        You must agree before submitting.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Submit form</button>
+                  </div>
+                </form>
+
+              </div>
+            </div>
+
+            {{> docs/subheader title="Underline" id="underline" isCustom=true description="Removes background and all by bottom borders."}}
+
+            <!-- Card -->
+            <div class="card card-sm docs-card">
+              <div class="card-body">
+
+                <div class="form-group">
+                  <input type="text" class="form-control form-control-underline" placeholder="Form control underline">
+                </div>
+
+                <div class="form-group">
+                  <input type="text" class="form-control form-control-underline is-valid" placeholder="Form control underline">
+                </div>
+
+                <div class="form-group mb-0">
+                  <input type="text" class="form-control form-control-underline is-invalid" placeholder="Form control underline">
+                </div>
+
+              </div>
+              <div class="card-footer">
+                <code class="html highlight">
+                  &lt;div&nbsp;class=&quot;form-group&quot;&gt;<br />&nbsp;&nbsp;&lt;input&nbsp;type=&quot;text&quot;&nbsp;class=&quot;form-control&nbsp;form-control-underline&quot;&nbsp;placeholder=&quot;Form&nbsp;control&nbsp;underline&quot;&gt;<br />&lt;/div&gt;
+                </code>
+              </div>
+            </div>
+
+
+            {{> docs/subheader title="Timeline radio" id="timelineRadio" isCustom=true description="The timeline radio component that combines the custom radios and the countUp plugin. The color of the timeline radio component can be controlled with the .timeline-radio-{color} utility classes."}}
+
+            <!-- Card -->
+            <div class="card card-sm docs-card">
+              <div class="card-body">
+
+                <!-- Form -->
+                <form>
+                  <div class="form-group timeline-radio timeline-radio-warning">
+
+                    <!-- Timeline radio -->
+                    <input class="timeline-radio-input" id="timelineRadioOne" data-toggle="price" data-target="#price" data-value="199" name="timelineRadio" type="radio">
+                    <label class="timeline-radio-label" for="timelineRadioOne">
+                      <small class="text-muted">1-5</small>
+                    </label>
+
+                    <!-- Timeline radio -->
+                    <input class="timeline-radio-input" id="timelineRadioTwo" data-toggle="price" data-target="#price" data-value="299" name="timelineRadio" type="radio">
+                    <label class="timeline-radio-label" for="timelineRadioTwo">
+                      <small class="text-muted">6-15</small>
+                    </label>
+
+                    <!-- Timeline radio -->
+                    <input class="timeline-radio-input" id="timelineRadioThree" data-toggle="price" data-target="#price" data-value="399" name="timelineRadio" type="radio">
+                    <label class="timeline-radio-label" for="timelineRadioThree">
+                      <small class="text-muted">16-40</small>
+                    </label>
+
+                    <!-- Timeline radio -->
+                    <input class="timeline-radio-input" id="timelineRadioFour" data-toggle="price" data-target="#price" data-value="499" name="timelineRadio" type="radio" checked>
+                    <label class="timeline-radio-label" for="timelineRadioFour">
+                      <small class="text-muted">41-100</small>
+                    </label>
+
+                    <!-- Timeline radio -->
+                    <input class="timeline-radio-input" id="timelineRadioFive" data-toggle="price" data-target="#price" data-value="599" name="timelineRadio" type="radio">
+                    <label class="timeline-radio-label" for="timelineRadioFive">
+                      <small class="text-muted">100+</small>
+                    </label>
+
+                  </div>
+                  <div class="row align-items-center">
+                    <div class="col-md text-center text-md-start">
+
+                      <!-- Price -->
+                      <div class="display-4 font-sans-serif fw-bolder mb-4 mb-md-0">
+                        <span class="fs-3 align-middle">$</span>
+                        <span class="mx-n2" id="price">499</span>
+                        <span class="fs-2 align-middle">/mo </span>
+                      </div>
+
+                    </div>
+                    <div class="col-md-auto">
+
+                      <!-- Button -->
+                      <button class="btn w-100 btn-primary-dark lift">
+                        Start Hiring
+                      </button>
+
+                    </div>
+                  </div>
+                </form>
+
+              </div>
+              <div class="card-footer">
+                <code class="html highlight">
+                  &lt;form&gt;<br />&nbsp;&nbsp;&lt;div&nbsp;class=&quot;form-group&nbsp;timeline-radio&nbsp;timeline-radio-warning&quot;&gt;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;Timeline&nbsp;radio&nbsp;--&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;class=&quot;timeline-radio-input&quot;&nbsp;id=&quot;timelineRadioOne&quot;&nbsp;data-toggle=&quot;price&quot;&nbsp;data-target=&quot;#price&quot;&nbsp;data-value=&quot;199&quot;&nbsp;name=&quot;timelineRadio&quot;&nbsp;type=&quot;radio&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;timeline-radio-label&quot;&nbsp;for=&quot;timelineRadioOne&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;small&nbsp;class=&quot;text-muted&quot;&gt;1-5&lt;/small&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;Timeline&nbsp;radio&nbsp;--&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;class=&quot;timeline-radio-input&quot;&nbsp;id=&quot;timelineRadioTwo&quot;&nbsp;data-toggle=&quot;price&quot;&nbsp;data-target=&quot;#price&quot;&nbsp;data-value=&quot;299&quot;&nbsp;name=&quot;timelineRadio&quot;&nbsp;type=&quot;radio&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;timeline-radio-label&quot;&nbsp;for=&quot;timelineRadioTwo&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;small&nbsp;class=&quot;text-muted&quot;&gt;6-15&lt;/small&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;Timeline&nbsp;radio&nbsp;--&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;class=&quot;timeline-radio-input&quot;&nbsp;id=&quot;timelineRadioThree&quot;&nbsp;data-toggle=&quot;price&quot;&nbsp;data-target=&quot;#price&quot;&nbsp;data-value=&quot;399&quot;&nbsp;name=&quot;timelineRadio&quot;&nbsp;type=&quot;radio&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;timeline-radio-label&quot;&nbsp;for=&quot;timelineRadioThree&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;small&nbsp;class=&quot;text-muted&quot;&gt;16-40&lt;/small&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;Timeline&nbsp;radio&nbsp;--&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;class=&quot;timeline-radio-input&quot;&nbsp;id=&quot;timelineRadioFour&quot;&nbsp;data-toggle=&quot;price&quot;&nbsp;data-target=&quot;#price&quot;&nbsp;data-value=&quot;499&quot;&nbsp;name=&quot;timelineRadio&quot;&nbsp;type=&quot;radio&quot;&nbsp;checked&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;timeline-radio-label&quot;&nbsp;for=&quot;timelineRadioFour&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;small&nbsp;class=&quot;text-muted&quot;&gt;41-100&lt;/small&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;Timeline&nbsp;radio&nbsp;--&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;class=&quot;timeline-radio-input&quot;&nbsp;id=&quot;timelineRadioFive&quot;&nbsp;data-toggle=&quot;price&quot;&nbsp;data-target=&quot;#price&quot;&nbsp;data-value=&quot;599&quot;&nbsp;name=&quot;timelineRadio&quot;&nbsp;type=&quot;radio&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;timeline-radio-label&quot;&nbsp;for=&quot;timelineRadioFive&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;small&nbsp;class=&quot;text-muted&quot;&gt;100+&lt;/small&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br /><br />&nbsp;&nbsp;&lt;/div&gt;<br />&nbsp;&nbsp;&lt;div&nbsp;class=&quot;row&nbsp;align-items-center&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-md&nbsp;text-center&nbsp;text-md-start&quot;&gt;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;Price&nbsp;--&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;display-4&nbsp;fw-bolder&nbsp;mb-4&nbsp;mb-md-0&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;fs-3&nbsp;align-middle&quot;&gt;$&lt;/span&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;mx-n2&quot;&nbsp;id=&quot;price&quot;&gt;499&lt;/span&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;fs-2&nbsp;align-middle&quot;&gt;/mo&nbsp;&lt;/span&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-md-auto&quot;&gt;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;Button&nbsp;--&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button&nbsp;class=&quot;btn&nbsp;w-100&nbsp;btn-primary-dark&nbsp;lift&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Start&nbsp;Hiring<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/button&gt;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />&nbsp;&nbsp;&lt;/div&gt;<br />&lt;/form&gt;
+                </code>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-3 col-xl-2 d-none d-xl-block docs-sidenav docs-sidenav-end">
+
+            <!-- List -->
+            <div class="my-6 my-md-9 px-lg-8 border-start">
+
+              <!-- List -->
+              <ul class="list-unstyled fs-xs mb-0">
+                <li class="mb-2">
+                  <a class="text-reset" href="#formControls" data-scroll>Form controls</a>
+                </li>
+                <li class="mb-2">
+                  <a class="text-reset" href="#sizing" data-scroll>Sizing</a>
+                </li>
+                <li class="mb-2">
+                  <a class="text-reset" href="#disabled" data-scroll>Disabled</a>
+                </li>
+                <li class="mb-2">
+                  <a class="text-reset" href="#readonly" data-scroll>Readonly</a>
+                </li>
+                <li class="mb-2">
+                  <a class="text-reset" href="#select" data-scroll>Select</a>
+                </li>
+                <li class="mb-2">
+                  <a class="text-reset" href="#checksAndRadios" data-scroll>Checks and radios</a>
+                </li>
+                <li class="mb-2">
+                  <a class="text-reset" href="#inputGroup" data-scroll>Input group</a>
+                </li>
+                <li class="mb-2">
+                  <a class="text-reset" href="#validation" data-scroll>Validatiion</a>
+                </li>
+                <li class="mb-2">
+                  <a class="text-reset" href="#underline" data-scroll>Underline</a>
+                </li>
+                <li class="mb-2">
+                  <a class="text-reset" href="#timelineRadio" data-scroll>Timeline radio</a>
+                </li>
+              </ul>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JAVASCRIPT -->
+    {{> partials/scripts}}
+
+  </body>
+</html>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+  <head>
+    {{> partials/head title="Goodkit"}}
+  </head>
+  <body class="docs-body">
+
+    <!-- MODALS -->
+    {{> partials/modals}}
+
+    <!-- NAVBAR -->
+    {{> partials/navbar classList="navbar-light fixed-top bg-white border-bottom"}}
+
+    <!-- BREADCRUMB -->
+    {{> docs/breadcrumb title="Decorations"}}
+
+    <!-- CONTENT -->
+    <section>
+      <div class="container-fluid">
+        <div class="row align-items-start">
+          <div class="col-lg-3 col-xl-2 docs-sidenav docs-sidenav-start">
+
+            {{> docs/nav}}
+
+          </div>
+          <div class="col-lg-9 col-xl-8 offset-lg-3 offset-xl-2 py-6 py-md-9 px-lg-10">
+
+            {{> docs/header title="Decorations" isCustom=true description="Decoration images with resonsive positioning." bootstrapDocs="" pluginsDocs=""}}
+
+            {{> docs/subheader title="" id="id" isCustom=false description="Easily adjust the positioning of the decorations with the responsive positioning and margin utilities. The color of the decorations can be controlled with the .text-{color} utility classes."}}
+
+            <!-- Card -->
+            <div class="card card-sm docs-card">
+              <div class="card-body">
+
+                <!-- Decoration -->
+                <div class="text-warning">
+                  {{> decorations/decoration-1}}
+                </div>
+
+              </div>
+              <div class="card-footer">
+                <code class="html highlight">
+                  &lt;div&nbsp;class=&quot;position-absolute&nbsp;text-warning&quot;&gt;<br />&nbsp;&nbsp;@@include(&quot;{{webRoot}}/partials/decorations/decoration-1.svg&quot;)<br />&lt;/div&gt;
+                </code>
+              </div>
+            </div>
+
+            {{> docs/subheader title="" id="id" isCustom=false description=""}}
+
+            <!-- Card -->
+            <div class="card card-sm docs-card">
+              <div class="card-body">
+
+                <!-- Decoration -->
+                <div class="text-primary-light">
+                  {{> decorations/decoration-2}}
+                </div>
+
+              </div>
+              <div class="card-footer">
+                <code class="html highlight">
+                  &lt;div&nbsp;class=&quot;position-absolute&nbsp;text-primary-light&quot;&gt;<br />&nbsp;&nbsp;@@include(&quot;{{webRoot}}/partials/decorations/decoration-2.svg&quot;)<br />&lt;/div&gt;
+                </code>
+              </div>
+            </div>
+
+            {{> docs/subheader title="" id="id" isCustom=false description=""}}
+
+            <!-- Card -->
+            <div class="card card-sm docs-card">
+              <div class="card-body">
+
+                <!-- Decoration -->
+                <div class="text-warning">
+                  {{> decorations/decoration-3}}
+                </div>
+
+              </div>
+              <div class="card-footer">
+                <code class="html highlight">
+                  &lt;div&nbsp;class=&quot;position-absolute&nbsp;text-warning&quot;&gt;<br />&nbsp;&nbsp;@@include(&quot;{{webRoot}}/partials/decorations/decoration-3.svg&quot;)<br />&lt;/div&gt;
+                </code>
+              </div>
+            </div>
+
+            {{> docs/subheader title="" id="id" isCustom=false description=""}}
+
+            <!-- Card -->
+            <div class="card card-sm docs-card">
+              <div class="card-body">
+
+                <!-- Decoration -->
+                <div class="text-primary">
+                  {{> decorations/decoration-4}}
+                </div>
+
+              </div>
+              <div class="card-footer">
+                <code class="html highlight">
+                  &lt;div&nbsp;class=&quot;position-absolute&nbsp;text-primary&quot;&gt;<br />&nbsp;&nbsp;@@include(&quot;{{webRoot}}/partials/decorations/decoration-4.svg&quot;)<br />&lt;/div&gt;
+                </code>
+              </div>
+            </div>
+
+            {{> docs/subheader title="" id="id" isCustom=false description=""}}
+
+            <!-- Card -->
+            <div class="card card-sm docs-card">
+              <div class="card-body">
+
+                <!-- Decoration -->
+                <div class="text-primary">
+                  {{> decorations/decoration-5}}
+                </div>
+
+              </div>
+              <div class="card-footer">
+                <code class="html highlight">
+                  &lt;div&nbsp;class=&quot;position-absolute&nbsp;text-primary&quot;&gt;<br />&nbsp;&nbsp;@@include(&quot;{{webRoot}}/partials/decorations/decoration-5.svg&quot;)<br />&lt;/div&gt;
+                </code>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-3 col-xl-2 d-none d-xl-block docs-sidenav docs-sidenav-end"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JAVASCRIPT -->
+    {{> partials/scripts}}
+
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    {{> partials/head title="Goodkit"}}
+  </head>
+  <body class="docs-body">
+
+    <!-- MODALS -->
+    {{> partials/modals}}
+
+    <!-- NAVBAR -->
+    {{> partials/navbar classList="navbar-light fixed-top bg-white border-bottom"}}
+
+    <!-- BREADCRUMB -->
+    {{> docs/breadcrumb title="Map"}}
+
+    <!-- CONTENT -->
+    <section>
+      <div class="container-fluid">
+        <div class="row align-items-start">
+          <div class="col-lg-3 col-xl-2 docs-sidenav docs-sidenav-start">
+
+            {{> docs/nav}}
+
+          </div>
+          <div class="col-lg-9 col-xl-8 offset-lg-3 offset-xl-2 py-6 py-md-9 px-lg-10">
+
+            {{> docs/header title="Map" isCustom=true description="Adds an interactive map powered by Mapbox." bootstrapDocs="" pluginsDocs="https://www.mapbox.com/"}}
+
+            {{> docs/subheader title="" id="id" isCustom=false description="To enable the Mapbox map on your website, you'll need a Mapbox access token. Mapbox uses access tokens to associate API requests with your account. You can create a new access token on your Access Tokens page (https://account.mapbox.com/access-tokens) or programmatically using the Mapbox Tokens API (https://docs.mapbox.com/api/accounts/#tokens). Once a new access token is created, please replace the original access token at src/assets/js/map.js with the new one."}}
+
+            <!-- Card -->
+            <div class="card card-sm docs-card">
+              <div class="card-body">
+                <div class="ratio ratio-21x9">
+                  <div data-map='{"center": [-118.244615, 34.052979], "zoom": 12}'></div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <code class="html highlight">
+                  &lt;div&nbsp;class=&quot;ratio&nbsp;ratio-21x9&quot;&gt;<br />&nbsp;&nbsp;&lt;div&nbsp;data-map='{&quot;center&quot;:&nbsp;[-118.244615,&nbsp;34.052979],&nbsp;&quot;zoom&quot;:&nbsp;12}'&gt;&lt;/div&gt;<br />&lt;/div&gt;
+                </code>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-3 col-xl-2 d-none d-xl-block docs-sidenav docs-sidenav-end"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JAVASCRIPT -->
+    {{> partials/scripts}}
+
+  </body>
+</html>

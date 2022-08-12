@@ -1,0 +1,13 @@
+//
+// validation.scss
+//
+
+.form-control.is-valid,
+.form-control.is-invalid {
+  background-size: $form-feedback-bg-size;
+}
+
+.custom-select.is-valid,
+.custom-select.is-invalid {
+  background-size: $form-select-bg-size, $form-feedback-bg-size;
+}
