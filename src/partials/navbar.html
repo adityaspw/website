@@ -2,10 +2,12 @@
   <div class="container-lg">
 
     <!-- Brand -->
-    <img class="w-50 d-lg-none" src="assets/img/logo/springwood.svg" alt="...">
-
+    
+    <a class="w-50 d-lg-none" href="{{webRoot}}/index.html"><img 
+      src="assets/img/logo/springwood.svg" alt="Springwood"></a>
     <!-- Toggler -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -15,23 +17,26 @@
       <!-- Navigation -->
       <ul class="navbar-nav justify-content-end w-100">
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="landingsDropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" id="landingsDropdown" href="#" role="button" aria-haspopup="true"
+            aria-expanded="false">
             Service
           </a>
           <div class="dropdown-positioner">
             {{> partials/dropdown-services}}
           </div>
         </li>
-       <li class="nav-item">
-        <a class="nav-link dropdown-toggle" id="accountDropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-          Blog
-        </a>
-        <div class="dropdown-positioner">
-          {{> partials/dropdown-docs}}
-        </div>
-      </li>
+        <li class="nav-item">
+          <a class="nav-link " id="accountDropdown" href="#" role="button" aria-haspopup="true"
+            aria-expanded="false">
+            Blog
+          </a>
+          <div class="dropdown-positioner">
+            {{> partials/dropdown-docs}}
+          </div>
+        </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="pagesDropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" id="pagesDropdown" href="#" role="button" aria-haspopup="true"
+            aria-expanded="false">
             Our Approach
           </a>
           <div class="dropdown-positioner">
@@ -41,12 +46,17 @@
       </ul>
 
       <!-- Brand -->
+      <a class="w-50 mx-3 d-none d-lg-block" href="{{webRoot}}/index.html"><img 
+          src="assets/img/logo/springwood.svg" alt="Springwood"></a>
 
-       <img class="w-25 mx-3 d-none d-lg-block" src="assets/img/logo/springwood.svg" alt="Springwood">
+
+
+
       <!-- Navigation -->
       <ul class="navbar-nav justify-content-start w-100">
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="pagesDropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" id="pagesDropdown" href="#" role="button" aria-haspopup="true"
+            aria-expanded="false">
             Client Success
           </a>
           <div class="dropdown-positioner">
@@ -54,7 +64,8 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link dropdown-toggle" id="docsDropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link " id="docsDropdown" href="#" role="button" aria-haspopup="true"
+            aria-expanded="false">
             About
           </a>
           <div class="dropdown-positioner">
@@ -62,29 +73,31 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="docsDropdown" href="https://share-eu1.hsforms.com/1RiHNSL-OTo6EBxAx11XFgQezvwg" role="button" target="_blank">
+          <a class="nav-link" id="docsDropdown" href="https://share-eu1.hsforms.com/1RiHNSL-OTo6EBxAx11XFgQezvwg"
+            role="button" target="_blank">
             Contact
           </a>
 
         </li>
-        <li class="nav-item d-lg-none">
-          <div class="nav-link">
+        <!-- <li class="nav-item d-lg-none">
+          <div class="nav-link"> -->
 
             <!-- Text -->
-            <span>
+            <!-- <span>
               Sans Serif Headers
-            </span>
+            </span> -->
 
             <!-- Switch -->
-            <form class="ms-auto me-n3">
+            <!-- <form class="ms-auto me-n3">
               <div class="form-check form-switch mb-0">
-                <input class="form-check-input family-switch" type="checkbox" id="familySwitchMobile" onchange="switchFamily(this.checked)">
+                <input class="form-check-input family-switch" type="checkbox" id="familySwitchMobile"
+                  onchange="switchFamily(this.checked)">
                 <label class="form-check-label" for="familySwitchMobile"></label>
               </div>
             </form>
 
           </div>
-        </li>
+        </li> -->
       </ul>
 
     </div>
