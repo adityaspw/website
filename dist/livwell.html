@@ -1,0 +1,990 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" type="image/x-icon" />
+    
+    <!-- Map CSS -->
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" />
+    
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="./assets/css/libs.bundle.css" />
+    
+    <!-- 
+      Theme Sans Serif CSS
+      Remove the "disabled" attribute if you want to enable Sans Serif for headings.
+    -->
+    <link rel="stylesheet" href="./assets/css/theme-sans-serif.bundle.css" id="themeSansSerif" />
+    
+    <!--
+      Demo JS
+      Remove the code below on a production website.
+    -->
+    <script src="./assets/js/demo.bundle.js"></script>
+    
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="./assets/css/theme.bundle.css" />
+    
+       <!-- Google Tag Manager -->
+       <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KGQ8RXH');</script>
+        <!-- End Google Tag Manager -->
+    
+         <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGQ8RXH"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+    <!-- Title -->
+    <title>Springwood</title>
+</head>
+
+<body>
+
+    <!-- MODALS -->
+    <!-- Sign in -->
+    <div class="modal fade" id="modalSignIn" tabindex="-1" role="dialog" aria-labelledby="modalSignInHeading" aria-hidden="true">
+      <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body text-center">
+    
+            <!-- Close -->
+            <button class="btn-close" data-bs-dismiss="modal" type="button" aria-label="Close"></button>
+    
+            <!-- Heading -->
+            <h1 class="mb-4" id="modalSignInHeading">
+              Sign In
+            </h1>
+    
+            <!-- Text -->
+            <p>
+              Don’t have an account? <a href="sign-up.html">Sign up</a>
+            </p>
+    
+            <!-- Form -->
+            <form class="mb-6">
+    
+              <!-- Email -->
+              <div class="form-group">
+                <label class="visually-hidden" for="signInEmail">
+                  Your email
+                </label>
+                <input class="form-control" id="signInEmail" type="email" placeholder="Your email">
+              </div>
+    
+              <!-- Password -->
+              <div class="form-group">
+                <div class="input-group inpit-group-merge">
+                  <input class="form-control" id="signInPassword" placeholder="Your password" type="password" aria-label="Your password" aria-describedby="signInPasswordCaption">
+                  <a class="input-group-text text-decoration-none text-gray-500" id="signInPasswordCaption" data-toggle="password" href="#signInPassword">
+                    <i class="fe fe-eye"></i>
+                  </a>
+                </div>
+              </div>
+    
+              <!-- Button -->
+              <button class="btn w-100 btn-primary">
+                Sign in
+              </button>
+    
+            </form>
+    
+            <!-- Link -->
+            <a class="fs-sm" href="password-reset.html">
+              Forgot your password?
+            </a>
+    
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Sign up -->
+    <div class="modal fade" id="modalSignUp" tabindex="-1" role="dialog" aria-labelledby="modalSignUpHeading" aria-hidden="true">
+      <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body text-center">
+    
+            <!-- Close -->
+            <button class="btn-close" data-bs-dismiss="modal" type="button" aria-label="Close"></button>
+    
+            <!-- Heading -->
+            <h1 class="mb-4" id="modalSignUpHeading">
+              Sign Up
+            </h1>
+    
+            <!-- Text -->
+            <p>
+              Create beautiful marketing websites in hours instead of weeks.
+            </p>
+    
+            <!-- Form -->
+            <form class="mb-6">
+    
+              <!-- Email -->
+              <div class="form-group">
+                <label class="visually-hidden" for="signUpEmail">
+                  Your email
+                </label>
+                <input class="form-control" id="signUpEmail" type="email" placeholder="Your email">
+              </div>
+    
+              <!-- Password -->
+              <div class="form-group">
+                <div class="input-group inpit-group-merge">
+                  <input class="form-control" id="signUpPassword" placeholder="Your password" type="password" aria-label="Your password" aria-describedby="signUpPasswordCaption">
+                  <a class="input-group-text text-decoration-none text-gray-500" id="signUpPasswordCaption" data-toggle="password" href="#signUpPassword">
+                    <i class="fe fe-eye"></i>
+                  </a>
+                </div>
+              </div>
+    
+              <!-- Button -->
+              <button class="btn w-100 btn-primary">
+                Sign up
+              </button>
+    
+            </form>
+    
+            <!-- Link -->
+            <small class="text-muted">
+              Already have an account? <a href="sign-in.html">Login</a>
+            </small>
+    
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Password reset -->
+    <div class="modal fade" id="modalPasswordReset" tabindex="-1" role="dialog" aria-labelledby="modalPasswordResetHeading" aria-hidden="true">
+      <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body text-center">
+    
+            <!-- Close -->
+            <button class="btn-close" data-bs-dismiss="modal" type="button" aria-label="Close"></button>
+    
+            <!-- Heading -->
+            <h1 class="display-4 mb-4" id="modalPasswordResetHeading">
+              Password reset
+            </h1>
+    
+            <!-- Text -->
+            <p class="text-muted">
+              Enter your email to reset your password.
+            </p>
+    
+            <!-- Form -->
+            <form class="mb-6">
+    
+              <!-- Email -->
+              <div class="form-group">
+                <label class="visually-hidden" for="passwordResetEmail">
+                  Your email
+                </label>
+                <input class="form-control" id="passwordResetEmail" type="email" placeholder="Your email">
+              </div>
+    
+              <!-- Button -->
+              <button class="btn w-100 btn-primary">
+                Reset password
+              </button>
+    
+            </form>
+    
+            <!-- Text -->
+            <small class="text-muted">
+              Remember your password? <a href="sign-in.html">Log in</a>.
+            </small>
+    
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Sale -->
+    <div class="modal fade" id="modalSale" tabindex="-1" role="dialog" aria-labelledby="modalSaleHeading" aria-hidden="true">
+      <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body text-center">
+    
+            <!-- Close -->
+            <button class="btn-close" data-bs-dismiss="modal" type="button" aria-label="Close"></button>
+    
+            <!-- Image -->
+            <img class="img-fluid mb-4 mt-n11" src="./assets/img/illustrations/illustration-4.png" alt="...">
+    
+            <!-- Heading -->
+            <h1 class="mb-4" id="modalSaleHeading">
+              30 Day Free Trial
+            </h1>
+    
+            <!-- Text -->
+            <p class="text-muted">
+              We’ll help you get started by getting you guides and all the basic informaiton.
+            </p>
+    
+            <!-- Form -->
+            <form class="mb-6">
+    
+              <!-- Email -->
+              <div class="form-group">
+                <label class="visually-hidden" for="saleModalEmail">
+                  Your email
+                </label>
+                <input class="form-control" id="saleModalEmail" type="email" placeholder="Your email">
+              </div>
+    
+              <!-- Button -->
+              <button class="btn w-100 btn-primary">
+                Start Trial
+              </button>
+    
+            </form>
+    
+            <!-- Text -->
+            <small class="text-muted">
+              <a class="text-reset" data-bs-dismiss="modal" href="#!">No thanks, I hate free stuff.</a>
+            </small>
+    
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-lg">
+    
+        <!-- Brand -->
+        
+        <a class="w-50 d-lg-none" href="./index.html"><img
+          src="assets/img/logo/springwood.svg" alt="Springwood"></a>
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <!-- Collapse -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+          <!-- Navigation -->
+          <ul class="navbar-nav justify-content-end w-100">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="landingsDropdown" href="#" role="button" aria-haspopup="true"
+                aria-expanded="false">
+                Service
+              </a>
+              <div class="dropdown-positioner">
+                <div class="dropdown-menu " aria-labelledby="docsDropdown">
+                    <a class="d-flex align-items-center text-reset text-decoration-none" href="./marketingaudit.html">
+                  
+                      
+                      <div class="ms-3">
+                  
+                        <!-- Heading -->
+                        <h6 class=" text-primary mb-0">
+                            MarTech Audit and Assurance
+                        </h6>
+                  
+                       
+                  
+                      </div>
+                  
+                    </a>
+                    <a class="d-flex align-items-center text-reset text-decoration-none mt-5" href="./growthmarketing.html">
+                  
+                  
+                      <div class="ms-3">
+                  
+                        <!-- Heading -->
+                        <h6 class=" text-primary mb-0">
+                            Growth Marketing Automation            
+                        </h6>
+                  
+                       
+                      </div>
+                  
+                    </a>
+                    <a class="d-flex align-items-center text-reset text-decoration-none mt-5" href="./customerengineering.html">
+                  
+                      <div class="ms-3">
+                  
+                        <!-- Heading -->
+                        <h6 class=" text-primary mb-0">
+                            Customer Data Engineering
+                        </h6>
+                  
+                      </div>
+                  
+                    </a>
+                    <a class="d-flex align-items-center text-reset text-decoration-none mt-5" href="./productanalytics.html">
+                  
+                        
+                    
+                        <div class="ms-3">
+                    
+                          <!-- Heading -->
+                          <h6 class="text-primary mb-0">
+                            Product Analytics and Business Intelligence
+                          </h6>
+                    
+                          <!-- Text -->
+                          <!-- <span>This is the new version</span> -->
+                    
+                        </div>
+                    
+                      </a>
+                  </div>
+                            </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="pagesDropdown" href="#" role="button" aria-haspopup="true"
+                aria-expanded="false">
+                Client Success
+              </a>
+              <div class="dropdown-positioner">
+                <div class="dropdown-menu" aria-labelledby="docsDropdown">
+                    <a class="d-flex align-items-center text-reset text-decoration-none" href="./sunedition.html">
+                  
+                    
+                  
+                      <div class="ms-3">
+                  
+                        <!-- Heading -->
+                        <h5 class=" text-primary mb-0">
+                            SunEdison
+                        </h5>
+                  
+                        <!-- Text -->
+                       
+                  
+                      </div>
+                  
+                    </a>
+                    <a class="d-flex align-items-center text-reset text-decoration-none mt-5" href="./oneistox.html">
+                  
+                     
+                      <div class="ms-3">
+                  
+                        <!-- Heading -->
+                        <h5 class=" text-primary mb-0">
+                            OneistoX
+                        </h5>
+                  
+                        <!-- Text -->
+                        
+                  
+                      </div>
+                  
+                    </a>
+                    <a class="d-flex align-items-center text-reset text-decoration-none mt-5" href="./livwell.html">
+                  
+                     
+                  
+                      <div class="ms-3">
+                  
+                        <!-- Heading -->
+                        <h5 class="text-primary mb-0">
+                            LivWell
+                        </h5>
+                  
+                        <!-- Text -->
+                        
+                      </div>
+                  
+                    </a>
+                    <a class="d-flex align-items-center text-reset text-decoration-none mt-5" href="./eduployment.html">
+                  
+                      
+                        <div class="ms-3">
+                    
+                          <!-- Heading -->
+                          <h5 class="text-primary mb-0">
+                            EduPloyment
+                          </h5>
+                    
+                          <!-- Text -->
+                    
+                        </div>
+                    
+                      </a>
+                  </div>
+                            </div>
+            </li>
+          </ul>
+    
+          <!-- Brand -->
+          <a class="w-100 mx-3 d-none d-lg-block" href="./index.html"><img 
+              src="assets/img/logo/springwood.svg" alt="Springwood"></a>
+    
+    
+    
+    
+          <!-- Navigation -->
+          <ul class="navbar-nav justify-content-start w-100">
+            
+            <li class="nav-item">
+              <a class="nav-link " id="docsDropdown" href="./about.html" role="button" aria-haspopup="true"
+                aria-expanded="false">
+                About Us
+              </a>
+              <div class="dropdown-positioner">
+                <div class="dropdown-menu dropdown-menu-lg" aria-labelledby="docsDropdown">
+                  <a class="d-flex align-items-center text-reset text-decoration-none" href="./docs/index.html">
+                
+                    <!-- Icon -->
+                    <div class="icon text-primary-light">
+                      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"/><path d="M8 3v.5A1.5 1.5 0 009.5 5h5A1.5 1.5 0 0016 3.5V3h2a2 2 0 012 2v16a2 2 0 01-2 2H6a2 2 0 01-2-2V5a2 2 0 012-2h2z" fill="#335EEA" opacity=".3"/><path d="M11 2a1 1 0 012 0h1.5a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-5a.5.5 0 01-.5-.5v-1a.5.5 0 01.5-.5H11z" fill="#335EEA"/><rect fill="#335EEA" opacity=".3" x="7" y="10" width="5" height="2" rx="1"/><rect fill="#335EEA" opacity=".3" x="7" y="14" width="9" height="2" rx="1"/></g></svg>    </div>
+                
+                    <div class="ms-3">
+                
+                      <!-- Heading -->
+                      <h6 class="text-uppercase text-primary mb-0">
+                        Documentation
+                      </h6>
+                
+                      <!-- Text -->
+                      <span>Compiling and building.</span>
+                
+                    </div>
+                
+                  </a>
+                  <a class="d-flex align-items-center text-reset text-decoration-none mt-5" href="./docs/alerts.html">
+                
+                    <!-- Icon -->
+                    <div class="icon text-primary-light">
+                      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"/><path d="M5.5 4h4A1.5 1.5 0 0111 5.5v1A1.5 1.5 0 019.5 8h-4A1.5 1.5 0 014 6.5v-1A1.5 1.5 0 015.5 4zm9 12h4a1.5 1.5 0 011.5 1.5v1a1.5 1.5 0 01-1.5 1.5h-4a1.5 1.5 0 01-1.5-1.5v-1a1.5 1.5 0 011.5-1.5z" fill="#335EEA"/><path d="M5.5 10h4a1.5 1.5 0 011.5 1.5v7A1.5 1.5 0 019.5 20h-4A1.5 1.5 0 014 18.5v-7A1.5 1.5 0 015.5 10zm9-6h4A1.5 1.5 0 0120 5.5v7a1.5 1.5 0 01-1.5 1.5h-4a1.5 1.5 0 01-1.5-1.5v-7A1.5 1.5 0 0114.5 4z" fill="#335EEA" opacity=".3"/></g></svg>    </div>
+                
+                    <div class="ms-3">
+                
+                      <!-- Heading -->
+                      <h6 class="text-uppercase text-primary mb-0">
+                        Components
+                      </h6>
+                
+                      <!-- Text -->
+                      <span>Full list of pieces in the theme</span>
+                
+                    </div>
+                
+                  </a>
+                  <a class="d-flex align-items-center text-reset text-decoration-none mt-5" href="./docs/changelog.html">
+                
+                    <!-- Icon -->
+                    <div class="icon text-primary-light">
+                      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"/><path d="M5.857 2h7.88a1.5 1.5 0 01.968.355l4.764 4.029A1.5 1.5 0 0120 7.529v12.554c0 1.79-.02 1.917-1.857 1.917H5.857C4.02 22 4 21.874 4 20.083V3.917C4 2.127 4.02 2 5.857 2z" fill="#335EEA" opacity=".3"/><rect fill="#335EEA" x="6" y="11" width="9" height="2" rx="1"/><rect fill="#335EEA" x="6" y="15" width="5" height="2" rx="1"/></g></svg>    </div>
+                
+                    <div class="ms-3">
+                
+                      <!-- Heading -->
+                      <h6 class="text-uppercase text-primary mb-0">
+                        Changelog
+                      </h6>
+                
+                      <!-- Text -->
+                      <span>This is the new version</span>
+                
+                    </div>
+                
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="docsDropdown" href="https://share-eu1.hsforms.com/1RiHNSL-OTo6EBxAx11XFgQezvwg"
+                role="button" target="_blank">
+                Contact
+              </a>
+    
+            </li>
+            
+          </ul>
+    
+        </div>
+    
+      </div>
+    </nav>
+    <!-- WELCOME -->
+    <section class="bg-dark">
+        <div class="container-lg">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md-6 col-lg-5 order-md-1 position-relative" style="z-index: 1;">
+
+                    <!-- Image -->
+                    <img class="img-fluid mw-md-125 mb-4 mb-md-0" src="assets/img/coworking/livwell1.png" alt="...">
+
+                </div>
+                <div class="col-md-6 order-md-0 pt-6 pt-md-10 pb-12 pb-md-13 text-center text-md-start">
+
+                    <!-- Preheading -->
+                    <h6 class="font-sans-serif text-warning mb-5">
+                       <a class="text-warning" href="https://www.livwell.asia/">LivWell</a>
+                    </h6>
+
+                    <!-- Heading -->
+                    <h1 class="display-3 text-white mb-4">
+                        LivWell leverages advanced segmentation to drive higher conversion and product adoption
+                    </h1>
+
+                    <!-- Text -->
+                    <p class="fs-lg text-white mb-0">
+                        Springwood helped LivWell to increase utilization of their marketing automation tool - MoEngage
+                        and execute growth strategies resulting in higher engagement
+
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SHAPE -->
+    <div class="position-relative">
+        <div class="shape shape-fluid-x shape-top text-white">
+            <div class="shape-img pb-8 pb-md-10">
+                <svg viewBox="0 0 100 50" preserveAspectRatio="none"><path d="M0 25h25L75 0h25v50H0z" fill="currentColor"/></svg>            </div>
+        </div>
+    </div>
+
+    <!-- CONTENT -->
+    <section class="py-9 py-md-11">
+        <div class="container-lg">
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-8">
+
+                    <!-- Text -->
+                    <p class="mb-1">
+                        LivWell Asia, a blockchain-based Gamified Insurtech & health engagement
+                        application, provides low-cost bite-size Health and Term Insurance in Vietnam
+                        and India aimed towards Gen-Z.
+                    </p>
+                
+                    <!-- Text -->
+                    <p>
+                        In order to build an effective wellness ecosystem and fitness rewards platform, it
+                        was imperative for LivWell to understand the customers, their likes and dislikes,
+                        preferences, and affinities, in order to engage them better.
+
+                    </p>
+                    <h1 class="mb-6">
+                        There was a need to add more layers of scientific analysis behind the campaigns.
+                    </h1>
+
+                    <!-- List -->
+
+                    <p>The team at Springwood focused on keeping the customer at the center of all decision-making and
+                        accordingly run customer-centric campaigns using MoEngage’s engagement platform. </p>
+
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                        <div class="">
+                            <!-- Image -->
+                            <img class="ps-lg-10 w-75 mg-fluid" src="assets/img/coworking/livwell2.png" alt="...">
+                        </div>
+                        
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-8">
+
+
+                    <!-- Text -->
+                    <p class="mb-6">
+                        Springwood helped LivWell in creating customer cohorts based on recency and frequency of usage
+                        with a focus on potential loyalists, loyal customers, hibernating, promising, needs attention,
+                        about to sleep, can’t lose, and recent users and then perform targeted A/B experiments for each
+                        segment.
+
+                    </p>
+                    <p class="mb-6">
+                        For example - Campaigns around insurance upsells were sent to the potential loyalists and
+                        loyal customers, folks who are far more engaged as compared to other segments. Whereas heavy
+                        discounts and coupons were sent to hibernating users to win them back.
+
+                    </p>
+                    <!-- Divider -->
+                    <hr class="hr-sm mx-auto mb-1" style="height: 3px;">
+
+                    <!-- Blockquote -->
+                    <blockquote class="mb-6">
+                        <p class="h1 text-primary text-center">
+                            The event-triggered onboarding Flow had a conversion rate of 53.27% (combined with Push &
+                            In-app), which is 2.5X higher than the industry benchmark
+
+                        </p>
+                    </blockquote>
+
+                    <!-- Divider -->
+                    <hr class="hr-sm mx-auto mb-1" style="height: 3px;">
+
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-md-10">
+                                <div class="w-100">
+        
+                                    <!-- Image -->
+                                    <img class="img-fluid" src="assets/img/coworking/livwell3.png" alt="...">
+        
+                                </div>
+                                
+                        </div>
+                    </div>
+                    <!-- Text -->
+                    <p class="mb-9">
+                        Using these strategies along with a robust feedback loop, LivWell was not only able to
+                        personalize the communication at every touchpoint and tailor it based on customers' actions,
+                        likes, preferences, location, and other attributes, but also create multiple cross-channel ows
+                        for each stage and string them together for a fully automated engagement workow across the
+                        entire lifecycle.
+                    </p>
+
+                    <!-- Images -->
+                    <div class="row justify-content-center">
+                        <div class="col-md-10">
+                                <div class="w-100">
+        
+                                    <!-- Image -->
+                                    <img class="img-fluid" src="assets/img/coworking/livwell4.png" alt="...">
+        
+                                </div>
+                                
+                        </div>
+                    </div>
+
+             
+                    <!-- Divider -->
+                    <hr class="my-9">
+
+                    <!-- Footer -->
+                    <footer class="d-flex align-items-center">
+
+                
+
+                </div>
+
+                </footer>
+
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- SHAPE -->
+    <div class="position-relative">
+        <div class="shape shape-fluid-x shape-top text-dark">
+            <div class="shape-img pb-8 pb-md-12">
+                <svg viewBox="0 0 100 50" preserveAspectRatio="none"><path d="M0 25h25L75 0h25v50H0z" fill="currentColor"/></svg>            </div>
+        </div>
+    </div>
+
+    <!-- DECORATION -->
+    <div class="position-relative d-none d-md-block">
+        <div class="position-absolute top-start text-warning mt-n11 ms-n8">
+            <svg width="185" height="186" viewBox="0 0 185 186" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="2" fill="currentColor"/><circle cx="22" cy="2" r="2" fill="currentColor"/><circle cx="42" cy="2" r="2" fill="currentColor"/><circle cx="62" cy="2" r="2" fill="currentColor"/><circle cx="82" cy="2" r="2" fill="currentColor"/><circle cx="102" cy="2" r="2" fill="currentColor"/><circle cx="122" cy="2" r="2" fill="currentColor"/><circle cx="142" cy="2" r="2" fill="currentColor"/><circle cx="162" cy="2" r="2" fill="currentColor"/><circle cx="182" cy="2" r="2" fill="currentColor"/><circle cx="2" cy="22" r="2" fill="currentColor"/><circle cx="22" cy="22" r="2" fill="currentColor"/><circle cx="42" cy="22" r="2" fill="currentColor"/><circle cx="62" cy="22" r="2" fill="currentColor"/><circle cx="82" cy="22" r="2" fill="currentColor"/><circle cx="102" cy="22" r="2" fill="currentColor"/><circle cx="122" cy="22" r="2" fill="currentColor"/><circle cx="142" cy="22" r="2" fill="currentColor"/><circle cx="162" cy="22" r="2" fill="currentColor"/><circle cx="182" cy="22" r="2" fill="currentColor"/><circle cx="2" cy="42" r="2" fill="currentColor"/><circle cx="22" cy="42" r="2" fill="currentColor"/><circle cx="42" cy="42" r="2" fill="currentColor"/><circle cx="62" cy="42" r="2" fill="currentColor"/><circle cx="82" cy="42" r="2" fill="currentColor"/><circle cx="102" cy="42" r="2" fill="currentColor"/><circle cx="122" cy="42" r="2" fill="currentColor"/><circle cx="142" cy="42" r="2" fill="currentColor"/><circle cx="162" cy="42" r="2" fill="currentColor"/><circle cx="182" cy="42" r="2" fill="currentColor"/><circle cx="2" cy="62" r="2" fill="currentColor"/><circle cx="22" cy="62" r="2" fill="currentColor"/><circle cx="42" cy="62" r="2" fill="currentColor"/><circle cx="62" cy="62" r="2" fill="currentColor"/><circle cx="82" cy="62" r="2" fill="currentColor"/><circle cx="102" cy="62" r="2" fill="currentColor"/><circle cx="122" cy="62" r="2" fill="currentColor"/><circle cx="142" cy="62" r="2" fill="currentColor"/><circle cx="162" cy="62" r="2" fill="currentColor"/><circle cx="182" cy="62" r="2" fill="currentColor"/><circle cx="2" cy="82" r="2" fill="currentColor"/><circle cx="22" cy="82" r="2" fill="currentColor"/><circle cx="42" cy="82" r="2" fill="currentColor"/><circle cx="62" cy="82" r="2" fill="currentColor"/><circle cx="82" cy="82" r="2" fill="currentColor"/><circle cx="102" cy="82" r="2" fill="currentColor"/><circle cx="122" cy="82" r="2" fill="currentColor"/><circle cx="142" cy="82" r="2" fill="currentColor"/><circle cx="162" cy="82" r="2" fill="currentColor"/><circle cx="182" cy="82" r="2" fill="currentColor"/><circle cx="2" cy="102" r="2" fill="currentColor"/><circle cx="22" cy="102" r="2" fill="currentColor"/><circle cx="42" cy="102" r="2" fill="currentColor"/><circle cx="62" cy="102" r="2" fill="currentColor"/><circle cx="82" cy="102" r="2" fill="currentColor"/><circle cx="102" cy="102" r="2" fill="currentColor"/><circle cx="122" cy="102" r="2" fill="currentColor"/><circle cx="142" cy="102" r="2" fill="currentColor"/><circle cx="162" cy="102" r="2" fill="currentColor"/><circle cx="182" cy="102" r="2" fill="currentColor"/><circle cx="2" cy="122" r="2" fill="currentColor"/><circle cx="22" cy="122" r="2" fill="currentColor"/><circle cx="42" cy="122" r="2" fill="currentColor"/><circle cx="62" cy="122" r="2" fill="currentColor"/><circle cx="82" cy="122" r="2" fill="currentColor"/><circle cx="102" cy="122" r="2" fill="currentColor"/><circle cx="122" cy="122" r="2" fill="currentColor"/><circle cx="142" cy="122" r="2" fill="currentColor"/><circle cx="162" cy="122" r="2" fill="currentColor"/><circle cx="182" cy="122" r="2" fill="currentColor"/><circle cx="2" cy="142" r="2" fill="currentColor"/><circle cx="22" cy="142" r="2" fill="currentColor"/><circle cx="42" cy="142" r="2" fill="currentColor"/><circle cx="62" cy="142" r="2" fill="currentColor"/><circle cx="82" cy="142" r="2" fill="currentColor"/><circle cx="102" cy="142" r="2" fill="currentColor"/><circle cx="122" cy="142" r="2" fill="currentColor"/><circle cx="142" cy="142" r="2" fill="currentColor"/><circle cx="162" cy="142" r="2" fill="currentColor"/><circle cx="182" cy="142" r="2" fill="currentColor"/><circle cx="2" cy="162" r="2" fill="currentColor"/><circle cx="22" cy="162" r="2" fill="currentColor"/><circle cx="42" cy="162" r="2" fill="currentColor"/><circle cx="62" cy="162" r="2" fill="currentColor"/><circle cx="82" cy="162" r="2" fill="currentColor"/><circle cx="102" cy="162" r="2" fill="currentColor"/><circle cx="122" cy="162" r="2" fill="currentColor"/><circle cx="142" cy="162" r="2" fill="currentColor"/><circle cx="162" cy="162" r="2" fill="currentColor"/><circle cx="182" cy="162" r="2" fill="currentColor"/><circle cx="2" cy="182" r="2" fill="currentColor"/><circle cx="22" cy="182" r="2" fill="currentColor"/><circle cx="42" cy="182" r="2" fill="currentColor"/><circle cx="62" cy="182" r="2" fill="currentColor"/><circle cx="82" cy="182" r="2" fill="currentColor"/><circle cx="102" cy="182" r="2" fill="currentColor"/><circle cx="122" cy="182" r="2" fill="currentColor"/><circle cx="142" cy="182" r="2" fill="currentColor"/><circle cx="162" cy="182" r="2" fill="currentColor"/><circle cx="182" cy="182" r="2" fill="currentColor"/></svg>        </div>
+    </div>
+
+    <!-- DECORATION -->
+    <div class="position-relative d-none d-md-block">
+        <div class="position-absolute top-end text-primary-dark mt-n15">
+            <svg width="129" height="208" viewBox="0 0 129 208" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#decoration5clip0)"><path fill-rule="evenodd" clip-rule="evenodd" d="M142.812 201.281a6.47 6.47 0 1112.94.002 6.47 6.47 0 01-12.94-.002zm1.618 0a4.851 4.851 0 119.702 0 4.851 4.851 0 01-9.702 0zm4.851-27.018l4.811-4.811 1.144 1.143-4.811 4.811 4.811 4.811-1.144 1.144-4.811-4.811-4.811 4.811-1.143-1.144 4.811-4.811-4.811-4.811 1.143-1.143 4.811 4.811zm-32.343 1.143a6.468 6.468 0 1112.936 0 6.468 6.468 0 01-12.936 0zm1.617 0a4.851 4.851 0 119.702 0 4.851 4.851 0 01-9.702 0zm4.851 24.732l4.811-4.811 1.144 1.143-4.811 4.811 4.811 4.811-1.144 1.144-4.811-4.811-4.811 4.811-1.143-1.144 4.811-4.811-4.811-4.811 1.143-1.143 4.811 4.811z" fill="currentColor"/></g><g clip-path="url(#decoration5clip1)"><path fill-rule="evenodd" clip-rule="evenodd" d="M142.812 149.281a6.47 6.47 0 1112.94.002 6.47 6.47 0 01-12.94-.002zm1.618 0a4.851 4.851 0 119.702 0 4.851 4.851 0 01-9.702 0zm4.851-27.018l4.811-4.811 1.144 1.143-4.811 4.811 4.811 4.811-1.144 1.144-4.811-4.811-4.811 4.811-1.143-1.144 4.811-4.811-4.811-4.811 1.143-1.143 4.811 4.811zm-32.343 1.143a6.468 6.468 0 1112.936 0 6.468 6.468 0 01-12.936 0zm1.617 0a4.851 4.851 0 119.702 0 4.851 4.851 0 01-9.702 0zm4.851 24.732l4.811-4.811 1.144 1.143-4.811 4.811 4.811 4.811-1.144 1.144-4.811-4.811-4.811 4.811-1.143-1.144 4.811-4.811-4.811-4.811 1.143-1.143 4.811 4.811z" fill="currentColor"/></g><g clip-path="url(#decoration5clip2)"><path fill-rule="evenodd" clip-rule="evenodd" d="M142.812 97.281a6.47 6.47 0 1112.939.002 6.47 6.47 0 01-12.939-.002zm1.618 0a4.851 4.851 0 119.703 0 4.851 4.851 0 01-9.703 0zm4.851-27.018l4.811-4.811 1.144 1.143-4.811 4.811 4.811 4.811-1.144 1.144-4.811-4.811-4.811 4.81-1.143-1.143 4.811-4.81-4.811-4.812 1.143-1.143 4.811 4.81zm-32.343 1.143a6.469 6.469 0 1112.937 0 6.469 6.469 0 01-12.937 0zm1.617 0a4.851 4.851 0 119.703 0 4.851 4.851 0 01-9.703 0zm4.851 24.732l4.811-4.811 1.144 1.143-4.811 4.811 4.811 4.811-1.144 1.144-4.811-4.811-4.811 4.811-1.143-1.144 4.811-4.81-4.811-4.812 1.143-1.143 4.811 4.81z" fill="currentColor"/></g><g clip-path="url(#decoration5clip3)"><path fill-rule="evenodd" clip-rule="evenodd" d="M38.813 149.281a6.47 6.47 0 1112.938 0 6.47 6.47 0 01-12.938 0zm1.617 0a4.851 4.851 0 119.702 0 4.851 4.851 0 01-9.702 0zm4.851-27.018l4.811-4.811 1.144 1.143-4.811 4.811 4.81 4.811-1.143 1.144-4.81-4.811-4.812 4.811-1.143-1.144 4.81-4.811-4.81-4.811 1.143-1.143 4.811 4.811zm-32.343 1.143a6.469 6.469 0 1112.937.001 6.469 6.469 0 01-12.938-.001zm1.617 0a4.851 4.851 0 119.702 0 4.851 4.851 0 01-9.702 0zm4.851 24.732l4.811-4.811 1.144 1.143-4.811 4.811 4.81 4.811-1.143 1.144-4.81-4.811-4.812 4.811-1.143-1.144 4.81-4.811-4.81-4.811 1.143-1.143 4.811 4.811z" fill="currentColor"/></g><g clip-path="url(#decoration5clip4)"><path fill-rule="evenodd" clip-rule="evenodd" d="M38.813 97.281a6.469 6.469 0 1112.937 0 6.469 6.469 0 01-12.938 0zm1.617 0a4.852 4.852 0 119.703 0 4.852 4.852 0 01-9.703 0zm4.851-27.018l4.811-4.811 1.144 1.143-4.811 4.811 4.81 4.811-1.143 1.144-4.81-4.811-4.812 4.81-1.143-1.143 4.81-4.81-4.81-4.812 1.143-1.143 4.811 4.81zm-32.343 1.143a6.469 6.469 0 1112.937 0 6.469 6.469 0 01-12.938 0zm1.617 0a4.852 4.852 0 119.703 0 4.852 4.852 0 01-9.703 0zm4.851 24.732l4.811-4.811 1.144 1.143-4.811 4.811 4.81 4.811-1.143 1.144-4.81-4.811-4.812 4.811-1.143-1.144 4.81-4.81-4.81-4.812 1.143-1.143 4.811 4.81z" fill="currentColor"/></g><g clip-path="url(#decoration5clip5)"><path fill-rule="evenodd" clip-rule="evenodd" d="M38.813 45.281a6.469 6.469 0 1112.937 0 6.469 6.469 0 01-12.938 0zm1.617 0a4.852 4.852 0 119.703 0 4.852 4.852 0 01-9.703 0zm4.851-27.018l4.811-4.811 1.144 1.143-4.811 4.811 4.81 4.811-1.143 1.144-4.81-4.811-4.812 4.81-1.143-1.143 4.81-4.81-4.81-4.812 1.143-1.143 4.811 4.81zm-32.343 1.143a6.469 6.469 0 1112.937 0 6.469 6.469 0 01-12.938 0zm1.617 0a4.852 4.852 0 119.703 0 4.852 4.852 0 01-9.703 0zm4.851 24.732l4.811-4.811 1.144 1.143-4.811 4.811 4.81 4.811-1.143 1.144-4.81-4.811-4.812 4.81-1.143-1.143 4.81-4.81-4.81-4.812 1.143-1.143 4.811 4.81z" fill="currentColor"/></g><g clip-path="url(#decoration5clip6)"><path fill-rule="evenodd" clip-rule="evenodd" d="M90.813 175.281a6.47 6.47 0 1112.938 0 6.47 6.47 0 01-12.939 0zm1.617 0a4.851 4.851 0 119.702 0 4.851 4.851 0 01-9.702 0zm4.851-27.018l4.811-4.811 1.144 1.143-4.811 4.811 4.811 4.811-1.144 1.144-4.81-4.811-4.812 4.811-1.143-1.144 4.81-4.811-4.81-4.811 1.143-1.143 4.811 4.811zm-32.344 1.143a6.469 6.469 0 1112.938.001 6.469 6.469 0 01-12.938-.001zm1.618 0a4.851 4.851 0 119.702 0 4.851 4.851 0 01-9.702 0zm4.851 24.732l4.811-4.811 1.144 1.143-4.811 4.811 4.81 4.811-1.143 1.144-4.81-4.811-4.812 4.811-1.143-1.144 4.81-4.811-4.81-4.811 1.143-1.143 4.811 4.811z" fill="currentColor"/></g><g clip-path="url(#decoration5clip7)"><path fill-rule="evenodd" clip-rule="evenodd" d="M90.813 123.281a6.47 6.47 0 1112.938 0 6.47 6.47 0 01-12.939 0zm1.617 0a4.851 4.851 0 119.702 0 4.851 4.851 0 01-9.702 0zm4.851-27.018l4.811-4.811 1.144 1.143-4.811 4.811 4.811 4.811-1.144 1.144-4.81-4.811-4.812 4.811-1.143-1.144 4.81-4.81-4.81-4.812 1.143-1.143 4.811 4.81zm-32.344 1.143a6.469 6.469 0 1112.938 0 6.469 6.469 0 01-12.938 0zm1.618 0a4.852 4.852 0 119.703 0 4.852 4.852 0 01-9.703 0zm4.851 24.732l4.811-4.811 1.144 1.143-4.811 4.811 4.81 4.811-1.143 1.144-4.81-4.811-4.812 4.811-1.143-1.144 4.81-4.811-4.81-4.811 1.143-1.143 4.811 4.811z" fill="currentColor"/></g><g clip-path="url(#decoration5clip8)"><path fill-rule="evenodd" clip-rule="evenodd" d="M90.813 71.281a6.469 6.469 0 1112.937 0 6.469 6.469 0 01-12.938 0zm1.617 0a4.852 4.852 0 119.703 0 4.852 4.852 0 01-9.703 0zm4.851-27.018l4.811-4.811 1.144 1.143-4.811 4.811 4.811 4.811-1.144 1.144-4.81-4.811-4.812 4.81-1.143-1.143 4.81-4.81-4.81-4.812 1.143-1.143 4.811 4.81zm-32.344 1.143a6.469 6.469 0 1112.938 0 6.469 6.469 0 01-12.938 0zm1.618 0a4.852 4.852 0 119.703 0 4.852 4.852 0 01-9.703 0zm4.851 24.732l4.811-4.811 1.144 1.143-4.811 4.811 4.81 4.811-1.143 1.144-4.81-4.811-4.812 4.81-1.143-1.143 4.81-4.81-4.81-4.812 1.143-1.143 4.811 4.81z" fill="currentColor"/></g><defs><clipPath id="decoration4clip0"><path transform="matrix(0 -1 -1 0 155.75 207.75)" fill="#fff" d="M0 0h51.75v51.75H0z"/></clipPath><clipPath id="decoration4clip1"><path transform="rotate(-90 155.75 0)" fill="#fff" d="M0 0h51.75v51.75H0z"/></clipPath><clipPath id="decoration4clip2"><path transform="matrix(0 -1 -1 0 155.75 103.75)" fill="#fff" d="M0 0h51.75v51.75H0z"/></clipPath><clipPath id="decoration4clip3"><path transform="matrix(0 -1 -1 0 51.75 155.75)" fill="#fff" d="M0 0h51.75v51.75H0z"/></clipPath><clipPath id="decoration4clip4"><path transform="matrix(0 -1 -1 0 51.75 103.75)" fill="#fff" d="M0 0h51.75v51.75H0z"/></clipPath><clipPath id="decoration4clip5"><path transform="matrix(0 -1 -1 0 51.75 51.75)" fill="#fff" d="M0 0h51.75v51.75H0z"/></clipPath><clipPath id="decoration4clip6"><path transform="matrix(0 -1 -1 0 103.75 181.75)" fill="#fff" d="M0 0h51.75v51.75H0z"/></clipPath><clipPath id="decoration4clip7"><path transform="matrix(0 -1 -1 0 103.75 129.75)" fill="#fff" d="M0 0h51.75v51.75H0z"/></clipPath><clipPath id="decoration4clip8"><path transform="matrix(0 -1 -1 0 103.75 77.75)" fill="#fff" d="M0 0h51.75v51.75H0z"/></clipPath></defs></svg>        </div>
+    </div>
+
+    <!-- RELATED -->
+    <section class="pt-8 pt-md-9 pb-10 pb-md-12 bg-dark">
+        <div class="container-lg">
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-8 text-center text-white">
+
+                    <!-- Heading -->
+                    <h2 class="display-3 mb-4">
+                        Related Readings
+                    </h2>
+
+                    <!-- Text -->
+                    <p class="mb-9">
+                        
+                    </p>
+
+                </div>
+            </div>
+            <div class="row mt-n6">
+                <div class="col-md-4">
+
+                    <!-- Card -->
+                    <div class="card card-sm rounded-top-start rounded-bottom-end lift lift-lg mt-6">
+
+                        <!-- Image -->
+                        <img class="card-img-top rounded-top-start" src="assets/img/coworking/sunedition1.jpg" alt="...">
+
+                        <!-- Shape -->
+                        <div class="position-relative">
+                            <div class="shape shape-fluid-x shape-top text-white">
+                                <div class="shape-img pb-5">
+                                    <svg viewBox="0 0 100 50" preserveAspectRatio="none"><path d="M0 25h25L75 0h25v50H0z" fill="currentColor"/></svg>                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Body -->
+                        <div class="card-body">
+
+                            <!-- Heading -->
+                            <h2 class="mb-2">
+                                SunEdison
+                            </h2>
+
+                            <!-- Text -->
+                            <p class="fs-sm mb-4">
+                                SunEdison increases HubSpot adoption by 50% in 8 weeks
+                            </p>
+
+                            <!-- Footer -->
+                            
+
+                            <!-- Link -->
+                            <a class="stretched-link" href="sunedition.html"></a>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+
+                    <!-- Card -->
+                    <div class="card card-sm rounded-top-start rounded-bottom-end lift lift-lg mt-6">
+
+                        <!-- Image -->
+                        <img class="card-img-top rounded-top-start" src="assets/img/coworking/oneistox1.png" alt="...">
+
+                        <!-- Shape -->
+                        <div class="position-relative">
+                            <div class="shape shape-fluid-x shape-top text-white">
+                                <div class="shape-img pb-5">
+                                    <svg viewBox="0 0 100 50" preserveAspectRatio="none"><path d="M0 25h25L75 0h25v50H0z" fill="currentColor"/></svg>                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Body -->
+                        <div class="card-body">
+
+                            <!-- Heading -->
+                            <h2 class="mb-2">
+                                Oneistox
+                            </h2>
+
+                            <!-- Text -->
+                            <p class="fs-sm mb-4">
+                                Oneistox wins at making an automated sales engine in Edtech            </p>
+
+                            <!-- Footer -->
+                            
+
+                            <!-- Link -->
+                            <a class="stretched-link" href="oneistox.html"></a>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+
+                    <!-- Card -->
+                    <div class="card card-sm rounded-top-start rounded-bottom-end lift lift-lg mt-6">
+
+                        <!-- Image -->
+                        <img class="card-img-top rounded-top-start" src="assets/img/coworking/eduployment1.png" alt="...">
+
+                        <!-- Shape -->
+                        <div class="position-relative">
+                            <div class="shape shape-fluid-x shape-top text-white">
+                                <div class="shape-img pb-5">
+                                    <svg viewBox="0 0 100 50" preserveAspectRatio="none"><path d="M0 25h25L75 0h25v50H0z" fill="currentColor"/></svg>                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Body -->
+                        <div class="card-body">
+
+                            <!-- Heading -->
+                            <h2 class="mb-2">
+                                EduPloyment.
+                            </h2>
+
+                            <!-- Text -->
+                            <p class="fs-sm mb-4">
+                                EduPloyment achieves 100% growth in job applications after adopting an omnichannel approach and automates it user communications         </p>
+
+                            <!-- Footer -->
+                           
+
+                            <!-- Link -->
+                            <a class="stretched-link" href="eduployment.html"></a>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+
+    <!-- FOOTER -->
+    <footer class="footer py-8 pt-md-11 bg-dark">
+      <div class="container-lg">
+        <div class="row">
+          <div class="col-md-4">
+    
+            <!-- Brand -->
+           <a href="./index.html"><img class="w-75 mx-3 d-none d-lg-block" src="assets/img/logo/springwood.svg" alt="..."></a> 
+    
+    
+          </div>
+          <div class="col-6 col-md">
+    
+            <!-- Heading -->
+            <h6 class="text-uppercase text-white mb-3 mb-md-5">
+              Service
+            </h6>
+    
+            <!-- List -->
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <a class="text-white-60" href="./marketingaudit.html">MarTech Audit and Assurance</a>
+              </li>
+              <li class="mb-3">
+                <a class="text-white-60" href="./growthmarketing.html">Growth Marketing Automation</a>
+              </li>
+              <li class="mb-3">
+                <a class="text-white-60" href="./customerengineering.html">Customer Data Engineering</a>
+              </li>
+              <li>
+                <a class="text-white-60" href="./productanalytics.html">Product Analytics and Business Intelligence</a>
+              </li>
+            </ul>
+    
+          </div>
+          
+          <div class="col col-md">
+            <h6 class="text-uppercase text-white mb-3 mb-md-5">
+              Client Success
+            </h6>
+    
+            <!-- List -->
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <a class="text-white-60" href="./sunedition.html">SunEdison</a>
+              </li>
+              <li class="mb-3">
+                <a class="text-white-60" href="./oneistox.html">OneistoX</a>
+              </li>
+              <li>
+                <a class="text-white-60" href="./livwell.html">LivWell</a>
+              </li>
+              <li>
+                <a class="text-white-60" href="./eduployment.html">EduPloyment</a>
+              </li>
+            </ul>
+    
+          </div>
+          <div class="col col-md">
+            <h6 class="text-uppercase text-white mb-3 mb-md-5">
+              <a class="text-white" href="https://share-eu1.hsforms.com/1RiHNSL-OTo6EBxAx11XFgQezvwg">Contact</a>
+            </h6>
+            <h6 class="text-uppercase text-white mb-3 mb-md-5">
+              <a class="text-white" href="./about.html">About Us</a>
+            </h6>
+            
+    
+          </div>
+    
+          </div>
+       
+        <div class="row">
+          <div class="col-12">
+    
+            <!-- Divider -->
+            <hr class="bg-white-10 my-7">
+    
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-12 col-md">
+    
+            <!-- List -->
+            <ul class="list-inline list-unstyled text-gray-600 small mb-md-0">
+              <li class="list-inline-item">
+                © Springwood
+              </li>
+              <li class="list-inline-item ms-md-8">
+                <a class="text-reset" href="#!">
+                  All Rights Reserved
+                </a>
+              </li>
+              <li class="list-inline-item ms-md-8">
+                <a class="text-reset" href="#!">
+                  Terms of Service
+                </a>
+              </li>
+            </ul>
+    
+          </div>
+          <div class="col-12 col-md-auto">
+    
+            <!-- Social -->
+            <ul class="list-inline list-unstyled text-gray-600 mb-0">
+              <!-- <li class="list-inline-item">
+                <a class="icon icon-sm text-reset" href="#!">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2.163C15.204 2.163 15.584 2.175 16.85 2.233C20.102 2.381 21.621 3.924 21.769 7.152C21.827 8.417 21.838 8.797 21.838 12.001C21.838 15.206 21.826 15.585 21.769 16.85C21.62 20.075 20.105 21.621 16.85 21.769C15.584 21.827 15.206 21.839 12 21.839C8.796 21.839 8.416 21.827 7.151 21.769C3.891 21.62 2.38 20.07 2.232 16.849C2.174 15.584 2.162 15.205 2.162 12C2.162 8.796 2.175 8.417 2.232 7.151C2.381 3.924 3.896 2.38 7.151 2.232C8.417 2.175 8.796 2.163 12 2.163ZM12 0C8.741 0 8.333 0.014 7.053 0.072C2.695 0.272 0.273 2.69 0.073 7.052C0.014 8.333 0 8.741 0 12C0 15.259 0.014 15.668 0.072 16.948C0.272 21.306 2.69 23.728 7.052 23.928C8.333 23.986 8.741 24 12 24C15.259 24 15.668 23.986 16.948 23.928C21.302 23.728 23.73 21.31 23.927 16.948C23.986 15.668 24 15.259 24 12C24 8.741 23.986 8.333 23.928 7.053C23.732 2.699 21.311 0.273 16.949 0.073C15.668 0.014 15.259 0 12 0V0ZM12 5.838C8.597 5.838 5.838 8.597 5.838 12C5.838 15.403 8.597 18.163 12 18.163C15.403 18.163 18.162 15.404 18.162 12C18.162 8.597 15.403 5.838 12 5.838ZM12 16C9.791 16 8 14.21 8 12C8 9.791 9.791 8 12 8C14.209 8 16 9.791 16 12C16 14.21 14.209 16 12 16ZM18.406 4.155C17.61 4.155 16.965 4.8 16.965 5.595C16.965 6.39 17.61 7.035 18.406 7.035C19.201 7.035 19.845 6.39 19.845 5.595C19.845 4.8 19.201 4.155 18.406 4.155Z" fill="currentColor"/>
+                  </svg>
+                </a>
+              </li> -->
+              <li class="list-inline-item ms-1">
+                <a class="icon icon-sm text-primary" href="https://www.linkedin.com/company/springwoodlabs/">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" aria-label="LinkedIn" viewBox="0 0 512 512"><rect width="512" height="512" fill="#0077b5" rx="15%"/><circle cx="142" cy="138" r="37"/><path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg>            </a>
+              </li>
+              <!-- <li class="list-inline-item ms-1">
+                <a class="icon icon-sm text-reset" href="#!">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M24 4.55705C23.117 4.94905 22.168 5.21305 21.172 5.33205C22.189 4.72305 22.97 3.75805 23.337 2.60805C22.386 3.17205 21.332 3.58205 20.21 3.80305C19.313 2.84605 18.032 2.24805 16.616 2.24805C13.437 2.24805 11.101 5.21405 11.819 8.29305C7.728 8.08805 4.1 6.12805 1.671 3.14905C0.381 5.36205 1.002 8.25705 3.194 9.72305C2.388 9.69705 1.628 9.47605 0.965 9.10705C0.911 11.388 2.546 13.522 4.914 13.997C4.221 14.185 3.462 14.229 2.69 14.081C3.316 16.037 5.134 17.46 7.29 17.5C5.22 19.123 2.612 19.848 0 19.54C2.179 20.937 4.768 21.752 7.548 21.752C16.69 21.752 21.855 14.031 21.543 7.10605C22.505 6.41105 23.34 5.54405 24 4.55705Z" fill="currentColor"/>
+                  </svg>
+                </a>
+              </li>
+              <li class="list-inline-item ms-1">
+                <a class="icon icon-sm text-reset" href="#!">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.373 0 0 5.372 0 12C0 17.084 3.163 21.426 7.627 23.174C7.522 22.225 7.427 20.769 7.669 19.733C7.887 18.796 9.076 13.768 9.076 13.768C9.076 13.768 8.717 13.049 8.717 11.986C8.717 10.318 9.684 9.072 10.888 9.072C11.911 9.072 12.406 9.841 12.406 10.762C12.406 11.791 11.751 13.33 11.412 14.757C11.129 15.951 12.011 16.926 13.189 16.926C15.322 16.926 16.961 14.677 16.961 11.431C16.961 8.558 14.897 6.549 11.949 6.549C8.535 6.549 6.531 9.11 6.531 11.756C6.531 12.787 6.928 13.894 7.424 14.494C7.522 14.613 7.536 14.718 7.507 14.839L7.174 16.199C7.121 16.419 7 16.466 6.772 16.36C5.273 15.662 4.336 13.471 4.336 11.711C4.336 7.926 7.086 4.449 12.265 4.449C16.428 4.449 19.663 7.416 19.663 11.38C19.663 15.516 17.056 18.844 13.436 18.844C12.22 18.844 11.077 18.213 10.686 17.466L9.938 20.319C9.667 21.362 8.936 22.669 8.446 23.465C9.57 23.812 10.763 24 12 24C18.627 24 24 18.627 24 12C24 5.372 18.627 0 12 0V0Z" fill="currentColor"/>
+                  </svg>
+                </a>
+              </li> -->
+            </ul>
+    
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <!-- Map JS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    
+    <!-- Vendor JS -->
+    <script src="./assets/js/vendor.bundle.js"></script>
+    
+    <!-- Theme JS -->
+    <script src="./assets/js/theme.bundle.js"></script>
+
+</body>
+
+</html>
