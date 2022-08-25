@@ -8,3 +8,29 @@
 //     }
 //   }
 
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: #043f83;
+    ;
+  }
+  
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    margin-left: 30px;
+    margin-top: -10px;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover:after {
+    transform: scaleX(0.5);
+    transform-origin: bottom left;
+  }
